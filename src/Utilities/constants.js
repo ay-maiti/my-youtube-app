@@ -1,0 +1,1 @@
+export const FETCH_VIDEOLIST_HOMEPAGE = "https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&part=snippet&part=statistics&chart=mostPopular&maxResults=50&regionCode=IN&key=AIzaSyDHP_TjdVTVEU_TQSk9Uyz9pj_uN2LHYPQ"
