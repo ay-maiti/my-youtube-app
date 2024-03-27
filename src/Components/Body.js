@@ -1,23 +1,21 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import MainContainer from './MainContainer'
 import {useSelector} from "react-redux"
+import {Outlet} from "react-router-dom"
 
 const Body = () => {
   let showSideBar = useSelector((store)=>store.app.showSideBar)
-
-  if(!showSideBar){
-    return <div>
-        <MainContainer/>
-    </div>
+  let width = 'w-1/1'
+  if(showSideBar){
+    width = 'w-5/6'
   }
   return (
     <div className='flex'>
-        <div className='w-1/6'>
+        {showSideBar && <div className='w-1/6'>
             <Sidebar/>
-        </div>
-        <div className='w-5/6'>
-            <MainContainer/>
+        </div>}
+        <div className={width}>
+            <Outlet/>
         </div>        
     </div>
   )

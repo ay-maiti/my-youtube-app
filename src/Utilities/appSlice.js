@@ -3,14 +3,17 @@ import {createSlice} from "@reduxjs/toolkit"
 const appSlice = createSlice({
     name:"app",
     initialState:{
-        showSideBar: false
+        showSideBar: true
     },
     reducers:{
         toggleSideBar:(state)=>{
             state.showSideBar = !state.showSideBar;
+        },
+        closeSidebar:(state)=>{
+            state.showSideBar = false;
         }
     }
 })
 
-export const {toggleSideBar} = appSlice.actions
+export const {toggleSideBar, closeSidebar} = appSlice.actions
 export default appSlice.reducer
