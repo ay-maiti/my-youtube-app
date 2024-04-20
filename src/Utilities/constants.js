@@ -1,1 +1,2 @@
 export const FETCH_VIDEOLIST_HOMEPAGE = "https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&part=snippet&part=statistics&chart=mostPopular&maxResults=50&regionCode=IN&key=AIzaSyDHP_TjdVTVEU_TQSk9Uyz9pj_uN2LHYPQ"
+export const USER_PROFILE_PIC_URL = "https://cdn.iconscout.com/icon/free/png-256/free-user-circle-3605375-3005455.png"
