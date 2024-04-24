@@ -57,14 +57,14 @@ const LiveChat = () => {
                     name: randomName,
                     message:randomText
                 }))
-                    }, 500)
+                    }, 1500)
     return ()=>{
         clearInterval(interval)
         dispatch(clearAllMessages())
     }
     },[])
     //console.log(messages)
-    console.log(userMessage)
+    //console.log(userMessage)
 
     if(!showChatPlay){
         return <button className='w-full bg-slate-200 hover:bg-slate-300 rounded-full text-sm p-2 border border-slate-500' onClick={()=>{setshowChatPlay(true)}}>Show Chat</button>

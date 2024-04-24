@@ -5,16 +5,18 @@ import {Outlet} from "react-router-dom"
 
 const Body = () => {
   let showSideBar = useSelector((store)=>store.app.showSideBar)
-  let width = 'w-1/1'
+  let width = ' w-[95%] '
+  let sideBarWidth = ' w-[5%] '
   if(showSideBar){
-    width = 'w-5/6'
+    width = ' w-5/6 '
+    sideBarWidth = ' w-1/6 '
   }
   return (
     <div className='flex'>
-        {showSideBar && <div className='w-1/6'>
-            <Sidebar/>
-        </div>}
-        <div className={width}>
+        <div className={sideBarWidth}>
+            <Sidebar showSideBar = {showSideBar}/>
+        </div>
+        <div className={"pl-6"+width}>
             <Outlet/>
         </div>        
     </div>
