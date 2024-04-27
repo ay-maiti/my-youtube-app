@@ -22,7 +22,23 @@ const bodyRouter = createBrowserRouter([{
 }])
 
 function App() {
-  /**
+  
+  return (
+    <Provider store={store}>
+    <div >
+    <Header/>
+    <RouterProvider router={bodyRouter}>
+      <Body/>
+    </RouterProvider>
+      
+    </div>
+    </Provider>
+  );
+}
+
+export default App;
+
+/**
    * Header
    * Sidebar
    * Body
@@ -31,15 +47,3 @@ function App() {
    *    VideoCardContainer
    *      VideoCard
    */
-  return (
-    <Provider store={store}>
-    <div >
-      <Header/>
-      <RouterProvider router={bodyRouter}><Body/></RouterProvider>
-      
-    </div>
-    </Provider>
-  );
-}
-
-export default App;

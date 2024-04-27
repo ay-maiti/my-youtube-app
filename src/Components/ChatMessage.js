@@ -1,6 +1,7 @@
 import React from 'react'
 
-const ChatMessage = ({name, message}) => {
+const ChatMessage = ({name, message, highlight}) => {
+  
   return (
     <div className='inline-block'>
             <div className='flex items-center'>

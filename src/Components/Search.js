@@ -23,7 +23,7 @@ const Search = () => {
             setSuggestions(suggestion_cache[searchText])    
         }
         else{
-            const data_raw = await fetch("http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="+searchText)
+            const data_raw = await fetch("https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="+searchText)
             const data = await data_raw.json()
             setSuggestions(data[1])
             const suggestion_obj = {}
