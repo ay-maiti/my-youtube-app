@@ -7,7 +7,7 @@ const VideoCardContainer = () => {
   const videoList = useFetchVideos()
 
   return videoList?(
-    <div className='w-full flex flex-wrap'>
+    <div className='w-full flex flex-wrap justify-center'>
     {videoList.items.map(item=><VideoCard key={item.id} item={item}/>)}
     </div>
   ):console.log("returned null");

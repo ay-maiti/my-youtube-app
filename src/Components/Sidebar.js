@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SidebarIcons from './SidebarIcons';
-import {sideBarIconsList} from '../Utilities/sideBarIconsList';
+import {sideBarIconsList, sideBarMenuItemsList} from '../Utilities/sideBarIconsList';
 
 
 const Sidebar = ({showSideBar}) => {
@@ -10,12 +10,10 @@ const Sidebar = ({showSideBar}) => {
   return (
     <>
     {showSideBar && <div className='min-h-screen'>
-        <ul className='p-3'>
-            <Link to="/"><li>Home</li></Link>
-            <li>Shorts</li>
-            <li>Subscription</li>
-            <li>YouTube Music</li>
-        </ul>
+        <div className='p-3'>
+            <Link to="/"></Link>
+            {sideBarMenuItemsList.map(icon=><Link><div className='rounded-lg my-2 bg-gray-100 text-sm text-center px-5 py-2'>{icon.name}</div></Link>)}
+        </div>
     </div>}
     {
       !showSideBar && <div>
