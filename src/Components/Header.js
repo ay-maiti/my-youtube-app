@@ -11,7 +11,7 @@ const Header = () => {
   }
 
   return (
-    <div className='flex justify-between items-center h-16'>
+    <div className='sticky top-0 z-50 flex justify-between items-center h-16 bg-white'>
         <div className='flex'>
             <img className='h-8 m-6' alt="Side-bar menu button" src="https://www.svgrepo.com/show/506800/burger-menu.svg" onClick={()=>handleSideBar()}/>            
                <a href='/' >
